@@ -53,9 +53,5 @@ jobs:
 
        - name: Terraform plan
          id: plan
-         run: terraform plan -no-color -input=false -out planfile
-         continue-on-error: true
-
-       - name: Terraform plan status
-         if: steps.plan.outcome == 'failure' 
-         run: exit 1     
+         run: terraform plan 
+            
